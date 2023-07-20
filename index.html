@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-
+    <script src="script.js" defer></script>
     <title>ChatBot</title>
   </head>
   <body>
@@ -17,20 +17,34 @@
       <input id="answer" placeholder="Enter answer here" type="text" value="" />
       <button type="submit">Submit</button>
     </form>
-    <script type="text/javascript">
-      function runChatBot() {
-        const response = document.getElementById("response");
-        const answer = document.getElementById("answer").value;
-        response.innerText = "Your name is " + answer;
-        const question = document.getElementById("question");
-        question.innerText = "When is your birthday?";
-      }
-      const answerForm = document.getElementById("answerForm");
-
-      answerForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-        runChatBot();
-      });
-    </script>
+    <br />
+    <form id="birthdayform">
+      <label for="months">Month:</label>
+      <select name="months" id="months">
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option></select
+      ><br />
+      <label for="birthdayDayAnswer">Day:</label>
+      <input
+        placeholder="Enter day of birthday"
+        type="number"
+        name=""
+        id="birthdayDayAnswer"
+        value=""
+        min="1"
+        max="31"
+      />
+      <button type="submit">Submit</button>
+    </form>
   </body>
 </html>
