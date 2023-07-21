@@ -11,3 +11,9 @@ function runChatBot() {
     event.preventDefault();
     runChatBot();
   });
+  const birthdayForm = document.getElementById("birthdayForm");
+
+  birthdayForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    runChatBot();
+  });
